@@ -3,6 +3,7 @@ from config import Config
 from models import db, User, Recibo
 import hashlib
 from datetime import datetime
+import os
 
 def create_app():
     app = Flask(__name__)

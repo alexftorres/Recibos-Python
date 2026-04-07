@@ -1,0 +1,41 @@
+.container{
+    width: 350px;
+    font-family:  Roboto, 'Segoe UI', Tahoma, sans-serif;
+}
+
+.form-control{
+    height: 50px;
+    border-radius: 0px;
+}
+
+.form{
+    margin-top: 20px;
+}
+
+.txtCentralizado{
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.label{
+    margin-bottom: 0px;
+}
+
+.btn{
+    border-radius: 0px;
+    height: 50px;
+}
+
+@media only screen and (max-width:800px){
+    .container, .btn{
+        width: 100%;
+    }
+    .label2{
+        margin-top: 10px;
+    }
+    .form-control{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}

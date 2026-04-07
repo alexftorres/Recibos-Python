@@ -1,0 +1,46 @@
+.topo{
+    width: 100%;
+    height: 56px;
+    background-color: #045FB4;
+}
+.h5{
+    margin-top: 20px;
+}
+.containerlg{
+    width: 600px;
+    font-family:  Roboto, 'Segoe UI', Tahoma, sans-serif;
+}
+.container{
+    widows: 600px;
+}
+
+
+.txtCentralizado{
+    text-align: center;
+}
+
+.label{
+    margin-bottom: 0px;
+}
+
+.btn{
+    border-radius: 0px;
+    width: 200px;
+}
+.assinatura{
+    border-top: 1px solid #000;
+}
+.assinatura, .txtass{
+    text-align: center;
+    float: right;
+    width: 300px;
+}
+
+@media only screen and (max-width:800px){
+    .container{
+        width: 100%;
+    }
+    .table{
+        font-size: 11px;
+    }
+}

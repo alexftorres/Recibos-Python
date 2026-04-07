@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Recibos Online</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            pegarDataAtual();
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="{{ url_for('generate') }}" class="btn btn-outline-primary"><i class="fas fa-arrow-left"></i> Voltar</a>
+        <br><br>
+
+        <div class="recibo">
+        <p class="text-center"><h2 class="txtcentralizado">Recibo</h2></p>
+        </br>
+        <hr>
+        </br>
+        <h5><strong>{{ recibo.pagadorRecibo }}</strong></h5>
+        </br>
+        <h4 class="text-right"><strong>R$ {{ valor }}</strong></h4>
+        </br>
+        <p class="text-justify">Recebi(emos) de <strong>{{ recibo.pagadorRecibo }}</strong> inscrito sob o CPF/CNPJ <strong>{{ recibo.docPagRecibo }}</strong> a importância de <strong>R$ {{ valor }}</strong> referente a <strong>{{ recibo.campoRefRecibo }}</strong>.</p>
+        <p>Para maior clareza, firmo(amos) o presente.</p>
+        <p><strong>{{ datarecibo }}</strong></p>
+        </br></br></br>
+        <div class="assinatura">
+            <div class="txtass">{{ recibo.recebedorRecibo }}</div>
+            <div class="txtass">{{ recibo.docRecebRecibo }}</div>
+            <div class="txtass">{{ recibo.foneRecebRecibo }}</div>
+        </div>
+        
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='mascara.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
+</body>
+
+</html>
